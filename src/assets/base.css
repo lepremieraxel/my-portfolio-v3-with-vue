@@ -27,6 +27,12 @@
 
   --pad-nav-top: 3.125rem;
   --pad-nav-x: 5rem;
+  --pad-main-x: 5rem;
+
+  --ff-primary: Cabinet Grotesk;
+  --ff-secondary: Bodoni Moda;
+
+  --trans-classic: all .3s ease;
 }
 
 ::selection{
@@ -48,10 +54,17 @@
 @font-face {
   font-family: Cabinet Grotesk;
   src: url(./fonts/CabinetGrotesk-Variable.ttf);
+  font-weight: 100 900;
+}
+@font-face {
+  font-family: Bodoni Moda;
+  src: url(./fonts/BodoniModa-Variable.ttf);
+  font-weight: 400 900;
+  font-variation-settings: 'opsz' 11;
 }
 
 body{
-  font-family: Cabinet Grotesk, sans-serif;
+  font-family: var(--ff-primary), sans-serif;
   background-color: var(--color-bg);
   color: var(--color-text);
 }
@@ -78,8 +91,59 @@ body{
   scale: 0 1;
   transform-origin: right;
   transition: scale .4s;
+  will-change: transform;
 }
-.link-hover:hover::before{
+.link-hover:hover::before, .router-link-exact-active::before{
   scale: 1;
   transform-origin: left;
+}
+.link-svg{
+  display: inline-flex;
+  align-items: center;
+}
+.link-svg svg{
+  height: .8rem;
+  width: 0;
+  opacity: 0;
+  transition: var(--trans-classic);
+}
+.link-svg:hover svg{
+  width: auto;
+  opacity: 1;
+  margin-left: .5rem;
+}
+.secondary-font{
+  font-family: var(--ff-secondary), serif;
+}
+.italic{
+  font-style: italic;
+}
+.click-btn{
+  border: 1px solid var(--color-text);
+  border-radius: 99px;
+  text-transform: uppercase;
+  font-family: var(--ff-secondary);
+  font-style: italic;
+  padding: 0 1rem;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  transition: var(--trans-classic);
+}
+.click-btn svg{
+  height: .9rem;
+  width: 0;
+  opacity: 0;
+  transition: var(--trans-classic);
+}
+.click-btn:hover{
+  background-color: var(--color-text);
+  color: var(--color-bg);
+  font-variation-settings: 'opsz' 8;
+  font-weight: var(--fw-bold);
+}
+.click-btn:hover svg{
+  width: auto;
+  margin-left: .7rem;
+  opacity: 1;
 }

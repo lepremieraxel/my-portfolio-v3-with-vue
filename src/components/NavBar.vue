@@ -1,16 +1,14 @@
 <script setup>
-
 </script>
 
 <template>
   <header>
-    <h1 class="nav-logo"><router-link class="not-text-link" :to="{ name: 'Home' }"><span>Axel</span><span>Marcial</span></router-link></h1>
+    <h1 class="nav-logo"><router-link class="not-text-link" :to="{ name: 'Home' }">Axel Marcial</router-link></h1>
     <nav>
       <router-link class="not-text-link link-hover" :to="{ name: 'About' }">About</router-link>
-      <router-link class="not-text-link link-hover" :to="{ name: 'Portfolio' }">Portfolio</router-link>
+      <router-link class="not-text-link link-hover" :to="{ name: 'Work' }">Work</router-link>
       <router-link class="not-text-link link-hover" :to="{ name: 'Contact' }">Contact</router-link>
     </nav>
-    <div class="switch-container"></div>
   </header>
 </template>
 
@@ -28,13 +26,6 @@
     text-transform: uppercase;
     font-weight: var(--fw-extrabold);
   }
-  h1 span{
-    line-height: 77%;
-  }
-  h1 span:first-child{
-    position: relative;
-    left: 10px;
-  }
   nav{
     display: flex;
     align-items: center;
@@ -45,5 +36,4 @@
     font-weight: var(--fw-medium);
     text-transform: uppercase;
   }
-
 </style>

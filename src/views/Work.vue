@@ -4,7 +4,7 @@
 
 <template>
   <NavBar></NavBar>
-  <h1>Portfolio</h1>
+  <h1>Work</h1>
 </template>
 
 <style scoped>
