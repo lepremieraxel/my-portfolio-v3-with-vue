@@ -52,12 +52,27 @@ article {
   padding: 0 0 var(--pad-nav-top) 0;
 }
 
+@media screen and (max-width: 1100px) {
+  article{
+    grid-template-areas: 
+      "about"
+      "latest"
+      "social";
+    gap: 5rem;
+  }
+}
+
 .about-container {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   grid-area: about;
   padding: 0 0 0 var(--pad-main-x);
+}
+@media screen and (max-width: 1100px){
+  .about-container{
+    padding: 0  var(--pad-main-x);
+  }
 }
 
 .about-container h2 {
@@ -77,12 +92,26 @@ article {
   display: flex;
   align-items: flex-end;
 }
+@media screen and (max-width: 1100px){
+  .social-container{
+    padding: 0  var(--pad-main-x) var(--pad-nav-top);
+  }
+}
 
 .social-container ul {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: .5rem;
+}
+@media screen and (max-width: 1100px){
+  .social-container ul{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+  }
 }
 
 .social-container ul li a {
@@ -98,6 +127,11 @@ article {
   justify-content: flex-end;
   grid-area: latest;
   padding: 0 var(--pad-main-x) 0 0;
+}
+@media screen and (max-width: 1100px){
+  .work-container{
+    padding: 0  var(--pad-main-x);
+  }
 }
 
 .work-container span {

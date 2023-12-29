@@ -3,7 +3,9 @@
 </script>
 
 <template>
-  <NavBar></NavBar>
+  <main>
+    <NavBar></NavBar>
+  </main>
   <h1>About</h1>
 </template>
 

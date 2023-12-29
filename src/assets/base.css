@@ -15,8 +15,8 @@
   --fw-thin: 100;
   --fw-extralight: 200;
   --fw-light: 300;
-  --fw-regular: 400;
-  --fw-medium: 500;
+  --fw-regular: 500;
+  --fw-medium: 600;
   --fw-bold: 700;
   --fw-extrabold: 800;
   --fw-black: 900;
@@ -33,6 +33,8 @@
   --ff-secondary: Bodoni Moda;
 
   --trans-classic: all .3s ease;
+
+  --opz: 11;
 }
 
 ::selection{
@@ -44,10 +46,35 @@
   :root{
     --color-text: var(--light);
     --color-bg: var(--dark);
-  }
+    --opz: 50;
+    --fw-regular: 400;
+    --fw-medium: 500;
+}
   ::selection{
     color: var(--dark);
     background-color: var(--light);
+  }
+}
+
+@media screen and (max-width: 1100px){
+  :root{
+    --pad-nav-top: 2rem;
+    --pad-nav-x: 3rem;
+    --pad-main-x: 3rem;
+  }
+}
+@media screen and (max-width: 1000px){
+  :root{
+    --fs-nav-logo: 4rem;
+    --fs-nav-link: 4rem;
+  }
+}
+@media screen and (max-width: 800px){
+  :root{
+    --pad-nav-top: 1rem;
+    --pad-nav-x: 2rem;
+    --pad-main-x: 2rem;
+    --fs-nav-logo: 3rem;
   }
 }
 
@@ -60,13 +87,14 @@
   font-family: Bodoni Moda;
   src: url(./fonts/BodoniModa-Variable.ttf);
   font-weight: 400 900;
-  font-variation-settings: 'opsz' 11;
 }
 
 body{
   font-family: var(--ff-primary), sans-serif;
   background-color: var(--color-bg);
   color: var(--color-text);
+  font-variation-settings: 'opsz' var(--opz);
+  font-weight: var(--fw-regular);
 }
 
 .not-text-link{
